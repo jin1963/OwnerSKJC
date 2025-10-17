@@ -1,0 +1,196 @@
+/* ===============================
+   Kaojino Dragon Chain Theme: Black & Gold
+   ใช้ร่วมกันได้ทั้ง Owner และ Public DApp
+   =============================== */
+
+body {
+  background-color: #000;
+  color: gold;
+  font-family: "Sarabun", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #ffd700;
+  text-shadow: 0 0 5px #ffbf00;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 1.4em;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.mono {
+  font-family: "Courier New", monospace;
+}
+
+.muted {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.card {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+input, textarea {
+  background: #111;
+  color: gold;
+  border: 1px solid #555;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 260px;
+}
+
+input[readonly] {
+  opacity: 0.8;
+}
+
+button {
+  background-color: gold;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: #ffbf00;
+  box-shadow: 0 0 8px gold;
+}
+
+button:disabled {
+  background-color: #444;
+  color: #999;
+  cursor: not-allowed;
+  border: 1px solid #333;
+}
+
+/* Packages & Stakes */
+.pkg, .stake {
+  background: #111;
+  border: 1px solid #333;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.pkg button, .stake button {
+  margin-top: 10px;
+}
+
+.pkg h3, .stake h3 {
+  color: gold;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Toast box */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: gold;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 1em;
+  max-width: 90%;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  z-index: 9999;
+}
+
+/* Topbar & Layout Enhancements */
+.topbar {
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+#wallet {
+  display: inline-block;
+  background: #111;
+  padding: 5px 12px;
+  border-radius: 6px;
+}
+
+.mono, .muted {
+  user-select: text;
+}
+
+.row.between {
+  justify-content: space-between;
+}
+
+.pkgRow {
+  border-bottom: 1px solid #222;
+  padding: 5px 0;
+}
+
+/* Scroll for large stake lists */
+#stakes {
+  max-height: 450px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Small screen tweaks */
+@media (max-width: 600px) {
+  .wrap {
+    padding: 10px;
+  }
+  input, textarea {
+    width: 100%;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .actions {
+    flex-direction: column;
+  }
+}
