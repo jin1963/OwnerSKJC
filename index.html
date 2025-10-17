@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>KJC Owner DApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script src="./config.js"></script>
+  <script src="./owner.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+    <h1>⚙️ KJC Owner Dashboard</h1>
+    <div class="topbar">
+      <button id="btnConnect" onclick="connectWallet()">🔗 เชื่อมต่อกระเป๋า</button>
+      <span id="wallet">❌ ยังไม่เชื่อมต่อ</span>
+    </div>
+
+    <div class="card">
+      <h2>📊 Contract Address</h2>
+      <p class="mono" id="ca">0x...</p>
+    </div>
+
+    <div class="card">
+      <h2>💰 Owner Actions</h2>
+      <div class="row">
+        <input type="text" id="withdrawTo" placeholder="Address ปลายทาง">
+        <input type="number" id="withdrawAmt" placeholder="จำนวน KJC">
+      </div>
+      <button onclick="ownerWithdrawKJC()">📤 ถอน KJC</button>
+      <button onclick="ownerWithdrawUSDT()">💵 ถอน USDT</button>
+    </div>
+
+    <div class="card">
+      <h2>🎁 Airdrop Stake</h2>
+      <textarea id="airUsers" placeholder="กรอก address ทีละบรรทัด"></textarea><br>
+      <textarea id="airAmounts" placeholder="กรอกจำนวน KJC ทีละบรรทัด (ตรงกับ address)"></textarea><br>
+      <input type="number" id="airStart" placeholder="Unix start time (ถ้าไม่ใส่จะใช้เวลาปัจจุบัน)">
+      <button onclick="airdropStake()">🚀 ส่ง Airdrop Stake</button>
+    </div>
+  </div>
+</body>
+</html>
